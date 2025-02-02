@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header  header   header"
+    "aside1  section1 aside2"
+    "aside1  section2 aside2"
+    "aside1  section3 aside2"
+    "footer  footer   footer";
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr auto;
+  gap: 10px;
+  height: 100vh;
+  padding: 10px;
+  background-color: #ccc;
+}
+
+.header,
+.footer {
+  background: #1a1d2e;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.header {
+  grid-area: header;
+}
+.footer {
+  grid-area: footer;
+}
+
+.aside1,
+.aside2 {
+  background: #2a2d3e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.aside1 {
+  grid-area: aside1;
+}
+.aside2 {
+  grid-area: aside2;
+}
+
+.section1,
+.section2,
+.section3 {
+  background: #3a3d4e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.section1 {
+  grid-area: section1;
+}
+.section2 {
+  grid-area: section2;
+}
+.section3 {
+  grid-area: section3;
+}
